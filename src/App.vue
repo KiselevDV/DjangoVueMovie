@@ -2,6 +2,7 @@
 <template>
   <div id="app">
     <Nav/>
+    <!-- router-view - сам контент-->
     <router-view/>
     <Footer/>
   </div>
@@ -13,9 +14,11 @@
 @import "assets/css/font-awesome.css";
 @import "assets/css/style.css";
 </style>
+
+<!-- Подключить всю логику -->
 <script>
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 export default {
   components: {Nav, Footer}

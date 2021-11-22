@@ -2,7 +2,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'  // базовый компонент из views
-import Single from "@/views/Single";
+import Single from '../views/Single';
 
 Vue.use(VueRouter)
 
@@ -16,7 +16,8 @@ const routes = [
   {
     path: '/:id',  // динамическая подстановка пути
     name: 'Single',
-    component: Single
+    component: Single,
+    props: true
   },
   {
     path: '/about',
@@ -29,6 +30,7 @@ const routes = [
 ]
 // Объекты со всеми раутами выше
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 // Подключаем их
