@@ -7,7 +7,7 @@
         <div class="left-ads-display col-lg-10">
           <div class="row">
             <div class="desc1-left col-md-6">
-              <img :src="movie.poster" class="img-fluid" alt="">
+              <img v-bind:src="movie.poster" class="img-fluid" alt="">
             </div>
             <div class="desc1-right col-md-6 pl-lg-4">
               <h3 class="editContent">{{ movie.title }}</h3>
